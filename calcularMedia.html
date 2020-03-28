@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <script>
+
+        //IIFE função auto-executavel
+        (function () {
+            function calcularMedia() {
+                var total = 0;
+                var qtd = arguments.length;
+                var x = 0;
+
+                while(typeof arguments[x] === 'number'){
+                //while(typeof arguments[x]){ nao captura valores ZERO
+                    total += arguments[x];                    
+                    x++;
+                }
+                return total / qtd;
+            }
+            var media1 = calcularMedia(2, 3);
+            var media2 = calcularMedia(4, 0, 10, 10);
+
+            console.log("media1: ", media1);
+            console.log('media: ', media2);
+        })()
+    </script>
+
+</head>
+
+<body>
+    Hello World!
+</body>
+
+</html>
