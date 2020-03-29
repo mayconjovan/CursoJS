@@ -13,7 +13,11 @@
             Curso Javascript completo 2018
         </h1>
 
-        <textarea name="txtArea" id="msg" cols="30" rows="10"></textarea>
+        <textarea name="txtArea" id="msg" cols="30" rows="10" maxlength="10"></textarea>
+        <div id="restaContainer" style="display: none;">
+
+            Restam <span id="resta"></span> caracteres
+        </div>
     </div>
 
 
@@ -22,31 +26,21 @@
         (function () {
             'use strict'
             var $txtMsg = document.getElementById('msg');
+            
+            var $resta = document.getElementById('resta');
+            var maxima = $txtMsg.maxLength;
 
-            /**
-             * Prefira utilizar o input para verificar se tem algum valor no campo
-             * pois pode ser colado diretamente
-             */
+            var $restaContainer = document.getElementById('restaContainer');
 
-            $txtMsg.addEventListener('keypress', keypress);
-            $txtMsg.addEventListener('keyup', keyup);
-            $txtMsg.addEventListener('keydown', keydown);
-            $txtMsg.addEventListener('input', input);
 
-            function keypress(e) {
-                console.log('Keypress', this.value);
-            }
+            $restaContainer.style.display = 'block';
+            $resta.textContent = maxima;
+            $txtMsg.addEventListener('input', checkLenght);
 
-            function keyup(e) {
-                console.log('Keyup', this.value);
-            }
+            function checkLenght(e) {
+                var numeroLetrasDigitadas = this.value.length;
+                $resta.textContent = maxima - numeroLetrasDigitadas;
 
-            function keydown(e) {
-                console.log('Keydown', this.value);
-            }
-
-            function input(e){
-                console.log('Input', this.value);
             }
 
         })()
