@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM</title>
+
+</head>
+
+<body>
+    <b>Manipulação do DOM</b>
+
+    <h1>Curso JavaScript Completo 2008</h1>
+    <input type="text" id="txtNome">
+    <button onclick="escreve()">Só clica</button>
+
+    <div id="msg"></div>
+
+    <script>
+        // textContet não aceita outras tag ele trabalha com String pura.
+        var txtNome2 = document.querySelector('#txtNome');
+
+        function escreve() {
+            var nome = txtNome2.value;
+
+            document.querySelector('#msg').innerHTML =
+                "Bem vindo, <b>" + nome + "</b> ";
+            // txtNome.value retorna o que tiver dentro do campo
+        }
+        
+    </script>
+
+</body>
+
+</html>
