@@ -16,6 +16,7 @@
         <button id="btn1" onclick="clicar()">botao 1 </button>
         <!--// DOM nivel zero-->
         <button id="btn2">botao 2 </button>
+        <button id="btn3" onclick="alert('onclick no atributo');">botao 3 </button>
     </div>
 
     <script>
@@ -23,8 +24,31 @@
         var btn2 = document.getElementById('btn2');
         btn2.onclick = clicar;
         */ // DOM nivel ZERO (NÂO UTILIZAR)
+
+        var btn3 = document.getElementById('btn3');
+
         function clicar() {
             alert('Clicou!')
+        }
+
+        btn3.addEventListener('click', function () {
+            alert('Clicou com DOM level 2');
+
+        });
+        
+        btn3.addEventListener('click', function () {
+            alert('Clicou com DOM level 2 com outro evento');
+
+        });
+
+
+        btn3.onclick = function () {
+            alert('Ola');
+
+        }
+
+        btn3.onclick=function(){
+            alert('mundo');
         }
     </script>
 </body>
