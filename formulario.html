@@ -26,20 +26,27 @@
         (function () {
             'use strict'
             var $txtMsg = document.getElementById('msg');
-            
+            var $restaContainer = document.getElementById('restaContainer');
             var $resta = document.getElementById('resta');
             var maxima = $txtMsg.maxLength;
 
-            var $restaContainer = document.getElementById('restaContainer');
+            function mostrarContainerResta(){
+                $restaContainer.style.display = 'block';
+            }
+            
+            mostrarContainerResta();
+            showCaractersLeft(maxima);
 
-
-            $restaContainer.style.display = 'block';
-            $resta.textContent = maxima;
             $txtMsg.addEventListener('input', checkLenght);
 
             function checkLenght(e) {
                 var numeroLetrasDigitadas = this.value.length;
-                $resta.textContent = maxima - numeroLetrasDigitadas;
+                var caracteresRestantes = parseInt(maxima) - parseInt(numeroLetrasDigitadas);
+                showCaractersLeft(caracteresRestantes);
+            }
+
+            function showCaractersLeft(n){
+                $resta.textContent = n;
 
             }
 
