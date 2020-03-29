@@ -13,11 +13,11 @@
             Curso Javascript completo 2018
         </h1>
 
-        <form action="#">
+        <form action="#" method="POST">
             <label for="txtUser">Usuário</label><input type="text" name="user" id="txtUser"> </br>
             <label for="txtPass">Senha</label>
             <input type="password" name="pass" id="txtPass"><br>
-            <button type="button" id='btn'>Logar</button>
+            <button type="submit" id="btn">Logar</button>
 
         </form>
     </div>
@@ -25,25 +25,22 @@
 
 
     <script>
-
-        (function(){
+        (function () {
             'use strict'
+            var $form = document.querySelector('form');
             var $txtUser = document.getElementById('txtUser');
             var $txtPass = document.getElementById('txtPass');
-            var $btn = document.getElementById('btn');  
+            var $btn = document.getElementById('btn');
 
-            $btn.addEventListener('click', function(){
-               
-                if(!$txtUser.value || !$txtPass.value ){
-                    alert('Preencha todos os campos')
+            $form.addEventListener('submit', function (e) {
+                if (!$txtUser.value || !$txtPass.value) {
+                    alert('Preencha todos os campos');
+                    e.preventDefault(); // previne que o evento padrão seja executado
                 }
-
-                console.log($txtUser)
             })
 
 
         })()
-
     </script>
 </body>
 
