@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM</title>
+
+</head>
+
+<body>
+    <b>Manipulação do DOM</b>
+
+    <h1>Curso JavaScript Completo 2008</h1>
+    <input type="text" id="txtNome" value="digite" readonly>
+    
+
+    <script>
+        var $txt = document.querySelector('#txtNome');
+        var nome = "Maycon";
+        var sobrenome = " Jovan Pereira";
+
+        document.querySelector('#txtNome').value = nome + sobrenome; // seta os valores
+        document.querySelector('#txtNome').value; // captura o valor
+        document.querySelector('#txtNome').disabled = true; // captura o valor
+
+
+    </script>
+
+</body>
+
+</html>
