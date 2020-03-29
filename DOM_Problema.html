@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM</title>
+
+</head>
+
+<body>
+    <b>Manipulação do DOM</b>
+
+    <h1>Curso JavaScript Completo 2008</h1>
+
+    <div id="msg"></div>
+
+    <script>
+        //IIFE
+        (function () {
+            var nome = prompt('Qual é seu nome?');
+            document.querySelector('#msg').textContent =
+            "Bem vindo, " + nome;
+
+        })()
+    </script>
+
+</body>
+
+</html>
