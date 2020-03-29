@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Curso Javascript completo 2018
+        </h1>
+
+        <form action="#">
+            <textarea cols="30" rows="10" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Quidem aliquam eligendi incidunt fuga aut at libero sequi doloremque, 
+                 itaque vero ducimus eveniet. Officia impedit quibusdam maxime,
+                  officiis accusamus molestias adipisci.
+            </textarea><br>
+
+            <label><input type="checkbox" name="" id="chk" checked>Li e aceito os termos deste contrato.</label><br>
+
+            <input type="submit" value="Continuar" id="btn">
+        </form>
+        <div id="restaContainer" style="display: none;">
+
+            Restam <span id="resta"></span> caracteres
+        </div>
+    </div>
+
+
+
+    <script>
+        (function () {
+            'use strict'
+            var $btn = document.getElementById('btn');
+            var $chk = document.getElementById('chk');
+
+            // $btn.disabled =  toggleBtn();
+
+            $chk.addEventListener('change', function () {
+                $btn.disabled = !$chk.checked;
+            });
+
+            /*
+            $chk.addEventListener('change', function(){               
+                $btn.disabled = toggleBtn();
+            });
+            function toggleBtn(){
+                return !$chk.checked;
+            }*/
+
+        })()
+    </script>
+</body>
+
+</html>
