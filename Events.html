@@ -30,29 +30,28 @@
     </div>
 
     <script>
-
         var $d1 = document.querySelector('#d1');
         var $d1Span = document.querySelector('#d1 span');
-        
-        $d1.addEventListener('click', function(){
-            console.log('click no d1');
-        }, true);
-        
-        $d1Span.addEventListener('click', function(){
-            console.log('click no d1Span');
-        }, true);
 
-        document.addEventListener('click', function(){
+        $d1.addEventListener('click', function (e) {
+            console.log('click no d1');
+            e.stopPropagation();
+        }, false);
+
+        $d1Span.addEventListener('click', function () {
+            console.log('click no d1Span');
+        }, false);
+
+        document.addEventListener('click', function (evt) {
             console.log('clicu no document');
-        }, true);
-        
-        
-        
-        
-        
-        
-        
-        
+            console.log(evt.currentTarget);
+            console.log(this);
+            console.log(evt.target);
+
+
+        }, false);
+
+
         /*
         var btn2 = document.getElementById('btn2');
         btn2.onclick = clicar;
@@ -68,7 +67,7 @@
             alert('Clicou com DOM level 2');
 
         });
-        
+
         btn3.addEventListener('click', function () {
             alert('Clicou com DOM level 2 com outro evento');
 
@@ -80,7 +79,7 @@
 
         }
 
-        btn3.onclick=function(){
+        btn3.onclick = function () {
             alert('mundo');
         }
     </script>
