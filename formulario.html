@@ -13,13 +13,7 @@
             Curso Javascript completo 2018
         </h1>
 
-        <form action="#" method="POST">
-            <label for="txtUser">Usuário</label><input type="text" name="user" id="txtUser"> </br>
-            <label for="txtPass">Senha</label>
-            <input type="password" name="pass" id="txtPass"><br>
-            <button type="submit" id="btn">Logar</button>
-
-        </form>
+        <textarea name="txtArea" id="msg" cols="30" rows="10"></textarea>
     </div>
 
 
@@ -27,18 +21,25 @@
     <script>
         (function () {
             'use strict'
-            var $form = document.querySelector('form');
-            var $txtUser = document.getElementById('txtUser');
-            var $txtPass = document.getElementById('txtPass');
-            var $btn = document.getElementById('btn');
+            var $txtMsg = document.getElementById('msg');
 
-            $form.addEventListener('submit', function (e) {
-                if (!$txtUser.value || !$txtPass.value) {
-                    alert('Preencha todos os campos');
-                    e.preventDefault(); // previne que o evento padrão seja executado
-                }
-            })
+            $txtMsg.addEventListener('keypress', keypress);
+            $txtMsg.addEventListener('keyup', keyup);
+            $txtMsg.addEventListener('keydown', keydown);
 
+            function keypress(e){
+                console.log('Keypress', this.value);
+            }
+            
+            function keyup(e){
+                console.log('Keyup', this.value);
+                
+            }
+            
+            function keydown(e){
+                console.log('Keydown', this.value);
+
+            }
 
         })()
     </script>
