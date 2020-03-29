@@ -35,9 +35,27 @@
 
         mudaN(n);
         console.log(n)
+        console.log('-------');
 
+        function mudaCor(cor) {
+                this.cor = cor;
+            }
 
+        var caneta1 = {
+            cor: 'red',
+            mudarCor: mudaCor
+        }
 
+        var caneta2 = {
+            cor: 'azul',
+            mudarCor: mudaCor
+        }
+
+        caneta1.mudarCor('green');
+        console.log(caneta1);
+        console.log(caneta2);
+
+ 
     </script>
 </body>
 
