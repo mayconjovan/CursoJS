@@ -23,22 +23,30 @@
             'use strict'
             var $txtMsg = document.getElementById('msg');
 
+            /**
+             * Prefira utilizar o input para verificar se tem algum valor no campo
+             * pois pode ser colado diretamente
+             */
+
             $txtMsg.addEventListener('keypress', keypress);
             $txtMsg.addEventListener('keyup', keyup);
             $txtMsg.addEventListener('keydown', keydown);
+            $txtMsg.addEventListener('input', input);
 
-            function keypress(e){
+            function keypress(e) {
                 console.log('Keypress', this.value);
             }
-            
-            function keyup(e){
-                console.log('Keyup', this.value);
-                
-            }
-            
-            function keydown(e){
-                console.log('Keydown', this.value);
 
+            function keyup(e) {
+                console.log('Keyup', this.value);
+            }
+
+            function keydown(e) {
+                console.log('Keydown', this.value);
+            }
+
+            function input(e){
+                console.log('Input', this.value);
             }
 
         })()
