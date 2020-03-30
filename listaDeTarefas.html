@@ -45,12 +45,14 @@
             }
         });
 
-        for (var i = 0; i < $lis.length; i++) {
-            addEvent($lis[i]);
-        }
+        $ul.addEventListener('click', function (e) {
+            if (e.target.nodeName === 'LI') {
+                toggleDone(e.target);
+            }
+        });
 
-        function toggleDone() {
-            this.classList.toggle('done');
+        function toggleDone(li) {
+            li.classList.toggle('done');
         }
 
         function addTask() {
@@ -62,13 +64,7 @@
 
             $txtTask.value = '';
             $txtTask.focus();
-
-            addEvent(li);
         };
-
-        function addEvent(li){
-            li.addEventListener('click', toggleDone);
-        }
     </script>
 </body>
 
