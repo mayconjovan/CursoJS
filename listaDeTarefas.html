@@ -22,7 +22,7 @@
         </h1>
 
         <input type="text" name="" id="txtTask">
-        <button id="btn">Cadastrar Tarefa</button>
+        <button id="btn" class="">Cadastrar Tarefa</button>
         <ul>
             <li>Estudar Javascript - DOM</li>
             <li>Estudar Eventos em JavaScript</li>
@@ -46,8 +46,7 @@
         });
 
         for (var i = 0; i < $lis.length; i++) {
-            console.log('hewllo');
-            $lis[i].addEventListener('click', toggleDone);
+            addEvent($lis[i]);
         }
 
         function toggleDone() {
@@ -55,11 +54,21 @@
         }
 
         function addTask() {
-            var task = '<li>' + $txtTask.value + ' </li>';
-            $ul.innerHTML += task;
+            var li = document.createElement('li');
+            var text = document.createTextNode($txtTask.value);
+
+            li.appendChild(text);
+            $ul.appendChild(li);
+
             $txtTask.value = '';
             $txtTask.focus();
+
+            addEvent(li);
         };
+
+        function addEvent(li){
+            li.addEventListener('click', toggleDone);
+        }
     </script>
 </body>
 
