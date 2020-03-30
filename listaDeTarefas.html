@@ -10,7 +10,7 @@
     <style>
         .done {
             text-decoration: line-through;
-            color: #555;
+            color: red;
         }
     </style>
 </head>
@@ -48,8 +48,16 @@
         $ul.addEventListener('click', function (e) {
             if (e.target.nodeName === 'LI') {
                 toggleDone(e.target);
+                removeTask(e.target);
             }
         });
+
+        function removeTask(li) {
+            if (confirm('Deseja realmente excluir a tarefa \n' + li.textContent + '?')) {
+                console.log(li.parentNode);
+                li.parentNode.removeChild(li);
+            }
+        }
 
         function toggleDone(li) {
             li.classList.toggle('done');
