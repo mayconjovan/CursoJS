@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+
+
+    <script>
+        var nome = 'Maycon Jovan Pereira';
+        var nomeFormatado = formatarNome(nome);
+
+
+        function formatarNome(nome) {
+            //return "Pereira, Maycon Jovan";
+
+            var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+
+            if (posicaoUltimoEspaco <= 0) {
+                return nome;
+            }
+
+            var ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+
+            console.log('ultimoNome', ultimoNome);
+
+            var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+            console.log('posicaoUltimoEspaco', posicaoUltimoEspaco);
+
+            return ultimoNome + ', ' + primeiroNome;
+        }
+
+        console.log(nomeFormatado);
+    </script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
