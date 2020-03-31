@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação JS</title>
+</head>
+
+<body>
+
+    <h1>Lógia de Programação com JS</h1>
+    <script>
+        // Cria a array
+        var arr = ['1', 20, 3, 4, 5, 'kkasdl', 20, "30"];
+
+        // vai retornar todos os numeros da lista
+        var soNumeros = arr.every(function (el, indice, obj) {
+            return typeof el === 'number';
+        })
+        // Verificar se tem pelo menos 1 elemento do tipo number
+        var aoMenosUmNumero = arr.some(function (el) {
+            return typeof el === 'number';
+        });
+        console.log(aoMenosUmNumero);
+
+        // retorna a lista filtrada com elementos do tipo number
+        var numeros = arr.filter(function (el, indice, arr) {
+            return typeof el === 'number';
+        })
+        console.log('numeros', numeros);
+
+        // Faz alguma coisa para cada elemento da lista
+        arr.forEach(function (el, i, arr) {
+            console.log('elemento: ', el, ' |  i -', i, arr.toString())
+        });
+
+        // encontra o primeiro indice do elemento procurado sendo (procurado, apartir da posição)
+        var posicaoStr = arr.indexOf(20, 5);
+        console.log('posicaoStr', posicaoStr);
+
+        // encontra o ultimo indice do elemento procurado sendo (procurado, apartir da posição)
+        var ultimaOcorrencia = arr.lastIndexOf(20, 5);
+        console.log('ultimaOcorrencia', ultimaOcorrencia);
+
+        // vai iterar todos os elementos da array e vai fazer algum tipo de alteração em cada um destes elementos
+        console.log(numeros);
+        numeros = numeros.map(function (el, i, arr) {
+            return el * i;
+        })
+        console.log(numeros);
+
+        // contatena todos os elementos do array como se fosse o toString()
+        var arr2 = arr.concat(numeros);
+        console.log(arr2);
+
+        // contatena todos os elementos do array como se fosse o toString() (aqui adicionando 2 itens)
+        var arr3 = arr.concat(numeros, 'ola', 'arr2');
+        console.log(arr3);
+
+        // Concatena todos os elementos do array separando pelo que estiver dentro do join
+        var str = arr2.join('--');
+        console.log(str);
+
+
+        // Serve para incluir itens no Array
+        arr.push('novo item');
+        console.log('arr', arr);
+
+
+        // remove o ultimo item e devolve para quem o chamou
+        var ultimoItem = arr.pop();
+        console.log('ultimoItem', ultimoItem);
+        console.log('arr', arr);
+
+        // remove o primeiro item da lista e devolve para quem o solicitou
+        var primeiroItem = arr.shift();
+        console.log('prmeiroItem', primeiroItem)
+        console.log('arr', arr);
+
+        // adiciona no inicio do array
+        arr.unshift(true, false, 'unshift')
+        console.log('arr', arr);
+        
+        // faz a mesma coisa que o forEach mas obriga a passa os parametros
+        numeros.shift();
+        var somaDeArr = numeros.reduce(function(anterior, atual, i){
+            console.log('anterior: ', anterior, ' | atual: ', atual, ' | i: ', i);
+            return anterior + atual + i;
+        }, 1);
+        console.log('numeros', numeros);
+        console.log('somaDeArr', somaDeArr);
+
+        // se tiver string vai concatenar, se for tudo numeros vai somar
+        var testeReduce = ['1', '2', '3', '4', '5'].reduceRight(function(i, a){
+            return i + a;
+        })
+        console.log('testeReduce', testeReduce);
+
+        // retorna a array invertido
+        var arr4 = [10,20,30];
+        arr.reverse();
+        console.log('arr', arr4);
+
+        // retorna todos os elementos após o indice 2
+        var arr = arr.slice(2);
+        console.log('arr', arr);
+
+        
+        // retorna todos os elementos após o indice 2 incluindo o elemento 5
+        var arr = arr.slice(2, 5);
+        console.log('arr', arr);
+
+        // remove e adiciona elementos ao mesmo tempo
+        // onde 2 = posição inicial, 0 numero de casas que serao deletadas após o 2
+        // 'limao' e 'melao' serão adicionados a lista
+        // o retorno deste metodo me mostra os elementos que foram deletados
+        console.log('arr2', arr2);
+        var arr3= arr2.splice(2, 3, 'limao', 'melao');
+        console.log('arr2', arr2);
+        console.log('arr3', arr3);
+
+</script>
+
+
+</body>
+
+</html>
