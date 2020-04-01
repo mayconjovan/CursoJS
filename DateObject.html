@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        (function () {
+            var minhaData = new Date();
+            console.log('minhaData', minhaData);
+            console.log('minhaData.getDay()', minhaData.getDay())
+            console.log('minhaData.getDate()', minhaData.getDate())
+            console.log('minhaData.getMonth()', minhaData.getMonth())
+            console.log('minhaData.getYear()', minhaData.getYear())
+            console.log('minhaData.getFullYear()', minhaData.getFullYear())
+            console.log('minhaData.getMinutes()', minhaData.getMinutes())
+            console.log('minhaData.getSeconds()', minhaData.getSeconds())
+            console.log('minhaData.getTime()', minhaData.getTime())
+            console.log('minhaData.setTime(0)', minhaData.setTime(0))
+            console.log('minhaData', minhaData)
+            console.log('minhaData.setDate(23)', minhaData.setDate(23))
+            console.log('minhaData.setMonth(1)', minhaData.setMonth(1))
+            console.log('minhaData', minhaData)
+            console.log('minhaData.setYear(1970)', minhaData.setYear(1970))
+            console.log('minhaData', minhaData)
+            console.log('minhaData.getTime()', minhaData.getTime())
+            console.log('minhaData.setDate(31)', minhaData.setDate(31))
+            console.log('minhaData.setMonth(3)', minhaData.setMonth(3))
+            console.log('minhaData.setYear(2020)', minhaData.setYear(2020))
+            console.log('minhaData', minhaData)
+            console.log('minhaData.setHours(0)', minhaData.setHours(0))
+            console.log('minhaData.setMinutes(0)', minhaData.setMinutes(0))
+            console.log('minhaData.setMilliseconds(0)', minhaData.setMilliseconds(0))
+            console.log('minhaData', minhaData)
+
+            minhaData = new Date(0)
+            console.log('minhaData', minhaData)
+            minhaData = new Date(2017, 11, 23)
+            console.log('minhaData', minhaData)
+            minhaData = new Date(2017, 11, 23, 10, 47, 30, 500)
+            console.log('minhaData', minhaData)
+            console.log('minhaData.getMilliseconds()', minhaData.getMilliseconds())
+            minhaData = new Date("2017/12/23")
+            console.log('minhaData', minhaData)
+        })()
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
