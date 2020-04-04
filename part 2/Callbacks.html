@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Callback é uma função que recebe por parametro outra função, essa função
+        // e essa função que recebeu o parametro vai chamar a função do parametro;
+        function foo(str) {
+            console.log('foo', str)
+        }
+
+        function executa(cb) {
+            var ola = 'mundo'
+            if (cb && typeof cb === 'function') {
+                cb(ola);
+            }
+        }
+        executa(foo);
+
+        executa(function teste(){
+            console.log('anonima');
+        })
+
+        document.addEventListener('click', function cliclou(e){
+            console.log('Clicou')
+            console.log('e', e)
+        })
+
+        function teste(str){
+
+        }
+        teste('ola')
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
