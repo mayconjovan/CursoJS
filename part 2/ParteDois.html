@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
 
     <script>
         var nome = 'Maycon'
         function mostraNome(){
             console.log(nome);
             var nome = "luciane"
+            
+            var testeHoisting =  function(){
+                return 'funfou'
+            }
+
+            console.log('---------------')
+            console.log('testeHoisting()', testeHoisting())
         }
 
         mostraNome();
     </script>
+</head>
+<body>
+
+   
     
 </body>
 </html>
