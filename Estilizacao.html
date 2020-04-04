@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .teste {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="teste" style="background: green;">Apenas um teste</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum exercitationem cupiditate quia omnis
+        eum beatae aperiam! Labore itaque aspernatur cumque reiciendis, harum repellendus repudiandae numquam animi
+        illum at veritatis.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus aspernatur aperiam dolor vel tempora exercitationem rem recusandae distinctio, assumenda voluptates! Est atque soluta rem omnis optio neque suscipit eligendi.</p>
+        <div class="teste2">teste 2</div>
+
+    <script>
+        var $teste = document.querySelector('.teste');
+        console.log('$teste.style', $teste.style.background)
+        console.log('getComputedStyle($teste).background', getComputedStyle($teste).background)
+        
+        var $p = document.querySelector('p');
+        console.log('$p.offsetHeigth, $p.offsetWidth', $p.offsetHeight, $p.offsetWidth)
+        console.log('$p.offsetLeft, $p.offsetTop', $p.offsetLeft, $p.offsetTop)
+        
+        var $teste2 = document.querySelector('.teste2');
+        console.log('$teste2.offsetLeft, $teste2.offsetTop', $p.offsetLeft, $p.offsetTop)
+   
+        console.log('$teste2.getBoundingClientRect()', $teste2.getBoundingClientRect())
+    </script>
+
+</body>
+
+</html>
