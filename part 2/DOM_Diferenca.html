@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            var _p1 = document.querySelectorAll('p');
+            var _p2 = document.getElementsByTagName('p');
+
+            console.log('p1.length', _p1.length)
+            console.log('p2.length', _p2.length)
+
+            var newP = document.createElement('p');
+            newP.textContent = 'novo paragrafo';
+            document.body.appendChild(newP);
+            console.log('_p1.length, _p2.length', _p1.length, _p2.length)
+            
+            
+            document.body.innerHTML = '<h1>teste<h1>';
+            console.log('_p1.length, _p2.length', _p1.length, _p2.length);
+
+
+
+        })
+
+    </script>
+</head>
+
+<body>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quod itaque veritatis tempore ea aspernatur, non rem natus reiciendis doloremque esse nesciunt repellat nihil. Recusandae, cumque! Consequatur sint quo qui?</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/part 2/scripts/beluga2.js"></script>
+</head>
+
+<body>
+
+    <p>teste<a href="#">1</a> teste </p>
+    <p>teste<a href="#">2</a> teste </p>
+    <p>teste<a href="#">3</a> teste </p>
+    <p>teste<a href="#">4</a> teste </p>
+    <p>teste<a href="#">5</a> teste </p>
+
+
+    <script>
+        var closeOrOpen = (
+
+            function closeOrOpen() {
+                var status = 'is-closed';
+
+                return function () {
+                    status = (status === 'is-closed') ? 'is-open' : 'is-closed';
+                    return status;
+                }
+            })()
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var beluga = {
+            numbers: {
+                value: 0,
+                add: (n) => {
+                    this.value += n;
+                },
+                log: () => {
+                    console.log(this.value);
+                }
+            }
+        }
+
+
+        var beluga2 = (function () {
+            var n = 0;
+
+            function isNumber(_n){
+                return typeof _n === 'number';
+            }
+
+            function _add(_n) {
+                if (isNumber(_n)) {
+                    n += _n;
+                }
+            }
+
+            function _log() {
+                console.log(n);
+            }
+
+            return {
+                add: _add,
+                log: _log
+            }
+        })()
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
