@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/part 2/scripts/beluga2.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        var obj1 = {
+            name: 'obj1',
+            log: function (msg) {
+                console.log(msg);
+            }
+        }
+
+
+        var obj2 = new Object();
+        obj2.name = 'obj2'
+
+        function Pessoa(nome) {
+            this.nome = nome;
+            this.falar = function (msg) {
+                //    console.log(this.name + 'fala: ' + msg);
+
+                console.log(`${this.nome} esta falando: ${msg}`);
+            }
+            this.endereco = "Rua qualquer"
+        }
+
+        var maycon = new Pessoa('Maycon');
+
+        var luana = Object.create(maycon);
+        luana.nome = "Luana";
+
+    </script>
+</body>
+
+</html>
