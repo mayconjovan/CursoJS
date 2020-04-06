@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/part 2/scripts/beluga2.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+        function teste(){
+            console.log(this)
+            var _self = this;
+           // setTimeout(function(){
+             //   console.log(_self);
+            //}, 1000)
+
+            setTimeout(() => {
+                console.log(this)
+            }, 1000)
+        }
+
+        //teste();
+
+        var obj = {foo: teste};
+        obj.foo()
+
+
+            
+    </script>
+</body>
+
+</html>
