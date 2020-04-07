@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function Animal(tipo) {
+
+            if (tipo) this.tipo = tipo;
+        }
+
+        function Cachorro(nome, tipo) {
+            this.nome = nome;
+            Animal.call(this, tipo)
+            this.constructor = Cachorro;
+
+        }
+        Animal.prototype.obterTipo = function () {
+            return this.tipo;
+        }
+
+        Cachorro.prototype = new Animal(this.tipo)
+        var toto = new Cachorro('toto', 'mamifero');
+        console.log(toto)
+
+        Animal.prototype.obterTipo = function () {
+            return this.tipo;
+        }
+
+        Animal.prototype.tipo = 'desconhecido'
+
+        var lesma = new Animal();
+
+
+    </script>
+</body>
+
+</html>

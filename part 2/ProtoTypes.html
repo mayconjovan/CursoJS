@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function Animal(tipo) {
+
+            if (tipo) this.tipo = tipo;
+        }
+
+        var cachorro = new Animal('mamifero')
+        var gato = new Animal('mamifero')
+        var peixe = new Animal()
+
+        Animal.prototype.obterTipo = function () {
+            return this.tipo;
+        }
+
+        Animal.prototype.tipo = 'desconhecido'
+
+        console.log(cachorro, gato, peixe)
+
+        function teste() {
+            console.log(arguments);
+            Array.prototype.forEach.call(arguments, function(argument){
+                console.log('argumento: ', argument)
+            })
+        }
+
+        teste('ola', 'mundo', 2, false)
+    </script>
+</body>
+
+</html>
