@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/part 2/scripts/beluga2.js"></script>
+</head>
+
+<body>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quisquam dicta ipsa vel sed dolore quis enim magnam delectus harum ut nam perferendis quo consectetur itaque animi, dolores mollitia cumque?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quisquam dicta ipsa vel sed dolore quis enim magnam delectus harum ut nam perferendis quo consectetur itaque animi, dolores mollitia cumque?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quisquam dicta ipsa vel sed dolore quis enim magnam delectus harum ut nam perferendis quo consectetur itaque animi, dolores mollitia cumque?</p>
+    <script>
+      var dom = blg.$$('p');
+     Array.prototype.forEach.call(dom, (p) => console.log(p))
+
+     blg.each('p', (p) => console.log('teste: ',p))
+    </script>
+</body>
+
+</html>
