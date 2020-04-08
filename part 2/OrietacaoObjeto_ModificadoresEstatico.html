@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Curso Javascript Completo 2018</h1>
+
+    <script>
+        class ContaBancaria {
+            constructor(cliente, numero) {
+                this.cliente = cliente;
+                this.numero = numero;
+                this.saldo = 0;
+            }
+
+            depositar(valor) {
+                this.saldo += valor;
+            }
+        }
+
+        class ContaCorrente extends ContaBancaria {
+            constructor(cliente, numero) {
+                super(cliente, numero);
+                this.limite = 1000;
+            }
+            
+            static get juros(){return 15}
+            static verTipo(){
+                return 'tipo conta corrente';
+            }
+
+        }
+
+        class ContaPoupanca extends ContaBancaria {
+            constructor(cliente, numero) {
+                super(cliente, numero)
+
+                //public
+                // this.aniversario = new Date();
+
+                const aniversario = new Date().getTime()
+                //fake private (convenção)
+                this._aniversario = Date.now();
+
+                this.getNiver = function () {
+                    return aniversario;
+                }
+
+            }
+            //getter
+            get aniversario() {
+                console.log('pegando aniversario')
+                return this._aniversario;
+            }
+            //setter
+            set aniversario(novaData){
+                console.log('setando aniversario', novaData);
+                return;
+                this._aniversario = novaData;
+            }
+        }
+
+        
+        let cc = new ContaCorrente('maycon', 2);
+        cc.depositar(1000);
+
+        let cp = new ContaPoupanca('maria', 3); 
+        let ca = new ContaCorrente('laial', 4); 
+        console.log(cp.aniversario)
+
+        console.log(cc.saldo)
+    </script>
+
+</body>
+
+</html>

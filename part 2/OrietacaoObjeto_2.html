@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Curso Javascript Completo 2018</h1>
+
+    <script>
+        //ECMA5
+        function ContaCorrente(cliente, numero) {
+            if (this instanceof ContaCorrente) {
+
+                this.cliente = cliente;
+                this.numero = numero;
+            }else {
+                //throw new Error('ContaCorrente só pode ser utilizada com o operador New')
+                return new ContaCorrente(cliente, numero)
+            }
+        }
+
+        //ECMA6
+        class ContaPoupança {
+            constructor(cliente, numero) {
+                this.cliente = cliente;
+                this.numero = numero;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
